@@ -1,0 +1,287 @@
+/* ============================================================
+   RESPONSIVE OVERRIDES for style.css
+   Load AFTER style.css. Breakpoints: 992px / 768px / 576px
+   ============================================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  /* Transparent navbar makes white links invisible when the
+     mobile menu is open — give it a solid backing while expanded */
+  .navbar-collapse.show,
+  .navbar-collapse.collapsing {
+    background: rgb(0, 0, 33);
+    margin: 10px -20px 0;
+    padding: 10px 20px 16px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    margin: 6px 0;
+    padding: 8px 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================================
+   HERO / firstSection
+   ============================================================ */
+@media (max-width: 991.98px) {
+  .firstSection {
+    flex-direction: column-reverse;
+    margin: 20px;
+    padding-top: 90px;
+    text-align: center;
+  }
+
+  .firstSection > div {
+    width: 100%;
+  }
+
+  .leftSection {
+    font-size: 2.2rem;
+    margin: 0 auto;
+  }
+
+  .rightSection img {
+    width: 60%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .buttons {
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .leftSection {
+    font-size: 1.7rem;
+  }
+
+  .rightSection img {
+    width: 70%;
+    max-width: 220px;
+  }
+
+  .buttons .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+/* ============================================================
+   PROJECTS / secondSection + cards
+   ============================================================ */
+@media (max-width: 991.98px) {
+  .secondSection {
+    padding: 70px 0;
+  }
+
+  .secondSection h2 {
+    font-size: 2.5rem;
+  }
+
+  .custom-card {
+    height: auto;
+    min-height: 26rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .secondSection {
+    padding: 50px 0;
+  }
+
+  .secondSection h2 {
+    font-size: 1.9rem;
+  }
+
+  .secondSection p {
+    font-size: 1rem;
+  }
+
+  .custom-card {
+    height: auto;
+    min-height: 0;
+    padding: 18px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .icon-c {
+    width: 100px;
+  }
+}
+
+/* ============================================================
+   ABOUT ME / thirdSection
+   ============================================================ */
+@media (max-width: 991.98px) {
+  .thirdSection {
+    flex-direction: column;
+    margin: 20px;
+    text-align: center;
+  }
+
+  .thirdSection > div {
+    width: 100%;
+  }
+
+  .thirdSection .leftSection {
+    font-size: 2.2rem;
+  }
+
+  .thirdSection .leftSection .about-desc {
+    font-size: 1.05rem;
+    text-align: left;
+  }
+
+  /* Fixed 30rem / 150px-margin photo mosaic doesn't translate to
+     mobile — switch to a simple 3-column, 2-row image grid */
+  .thirdSection .rightSection {
+    width: 100%;
+    max-width: 480px;
+    margin: 24px auto 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 120px);
+    gap: 8px;
+  }
+
+  .thirdSection .rightSection .img1 { grid-area: 1 / 1 / 2 / 2; }
+  .thirdSection .rightSection .img2 { grid-area: 2 / 1 / 3 / 2; }
+  .thirdSection .rightSection .img3 { grid-area: 1 / 2 / 3 / 3; }
+  .thirdSection .rightSection .img4 { grid-area: 1 / 3 / 2 / 4; }
+  .thirdSection .rightSection .img5 { grid-area: 2 / 3 / 3 / 4; }
+  .thirdSection .rightSection .img6 { display: none; }
+}
+
+@media (max-width: 575.98px) {
+  .thirdSection .leftSection {
+    font-size: 1.7rem;
+  }
+
+  .thirdSection .rightSection {
+    grid-template-rows: repeat(2, 90px);
+    gap: 6px;
+  }
+}
+
+/* ============================================================
+   SERVICES / fourthSection
+   ============================================================ */
+@media (max-width: 991.98px) {
+  .fourthSection {
+    padding: 70px 0;
+  }
+
+  .fourthSection h2 {
+    font-size: 2.5rem;
+  }
+
+  .service-box {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .fourthSection {
+    padding: 50px 0;
+  }
+
+  .fourthSection h2 {
+    font-size: 1.9rem;
+  }
+
+  .fourthSection p {
+    font-size: 1rem;
+  }
+
+  .service-box {
+    padding: 20px;
+  }
+
+  .service-icon {
+    font-size: 34px;
+  }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+@media (max-width: 991.98px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 30px;
+    gap: 30px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 0 24px;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .footer h3 {
+    font-size: 1.3rem;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-rights {
+    font-size: 0.8rem;
+    padding: 16px 12px;
+  }
+}
+
+/* ============================================================
+   TYPED.JS TEXT — keep it from overflowing narrow screens
+   ============================================================ */
+@media (max-width: 575.98px) {
+  #element,
+  #element-a {
+    display: inline-block;
+    word-break: break-word;
+  }
+}
