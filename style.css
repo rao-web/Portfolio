@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(0, 0, 33);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 1.15rem;
+}
+
+
+/* =================================================NAVBAR================================================= */
+
+header{
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 40px;
+    background: transparent !important;
+    transition: all 0.4s ease;
+    z-index: 1000;
+}
+
+.navbar.scrolled{
+    background: #dce8f4 !important;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.navbar-nav .nav-link{
+    color: white;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover{
+    color: rgb(170,107,228);
+}
+
+.navbar-nav .nav-link.active{
+    color: rgb(170,107,228);
+}
+
+.navbar.scrolled .nav-link{
+    color: #0a0a23;
+}
+
+.navbar.scrolled .nav-link:hover{
+    color: rgb(170,107,228);
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+.navbar-brand:hover{
+    font-size: 2rem;
+    font-weight: 700;
+    color: rgb(170,107,228);
+}
+
+.navbar.scrolled .navbar-brand{
+    color: rgb(0, 0, 33);
+}
+
+
+/* =================================================HERO SECTION================================================= */
+
+
+.firstSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 36px;
+    margin-left: 39px;
+}
+
+.firstSection > div {
+    width: 45%;
+}
+
+.leftSection {
+    font-size: 3rem;
+    margin: auto;
+}
+
+.rightSection img {
+    width: 30rem;
+    margin-left: 75px;
+}
+
+.name,
+#element {
+    color: rgb(170, 107, 228);
+}
+
+
+/* =================================================HERO BUTTONS================================================= */
+
+.buttons {
+    padding: 50px 0;
+}
+
+.buttons .btn {
+    padding: 12px;
+    background: #1e2167;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 20px;
+}
+
+.buttons .btn:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    background: #1e2167;
+}
+
+
+/* =================================================PROJECTS SECTION================================================= */
+
+.secondSection {
+    padding: 100px 0;
+    background: #dce8f4;
+    display: flex;
+    margin: auto;
+}
+
+.secondSection h2 {
+    font-weight: 800;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: rgb(0, 0, 33);
+}
+
+
+/* =================================================PROJECTS CARDS================================================= */
+
+.custom-card {
+    background: rgb(0, 0, 33);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 29rem;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* =================================================CARD ICON================================================= */
+
+.icon-box {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.custom-card:hover .icon-box {
+    transform: scale(1.1);
+}
+
+.icon-c {
+    height: auto;
+    width: 150px;
+}
+
+.bg-laptop {
+    background: transparent !important;
+}
+
+
+/* =================================================CARD TEXT================================================= */
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #dce8f4;
+    margin-bottom: 15px;
+}
+
+.card-desc {
+    color: gray;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    color: gray;
+}
+
+.card-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-list li i {
+    color: rgb(170, 107, 228);
+    margin-right: 8px;
+}
+
+/* =============================================ABOUTME============================================= */
+.thirdSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 36px;
+    margin-left: 39px;
+}
+
+.thirdSection > div {
+    width: 45%;
+}
+
+.thirdSection .leftSection {
+    font-size: 3rem;
+    margin: auto;
+}
+
+.thirdSection .leftSection .about-desc {
+    font-size: 1.25rem;
+    margin: auto;
+}
+.thirdSection .rightSection{
+    width: 30rem;
+    margin: 36px;
+    margin-left: 75px;
+}
+
+.thirdSection .name,
+#element-a {
+    color: rgb(170, 107, 228);
+}
+
+.thirdSection .rightSection {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(4, auto);
+    gap: 15px;
+    margin-right: 150px;
+}
+
+
+.thirdSection .rightSection .img1 { grid-area: 1 / 1 / 3 / 2; }
+.thirdSection .rightSection .img2 { grid-area: 3 / 1 / 5 / 2; }
+.thirdSection .rightSection .img3 { grid-area: 1 / 2 / 5 / 3; }
+.thirdSection .rightSection .img4 { grid-area: 1 / 3 / 2 / 4; } 
+.thirdSection .rightSection .img5 { grid-area: 3 / 3 / 5 / 4; }
+.thirdSection .rightSection .img6 { grid-area: 2 / 3 / 3 / 4; }
+
+
+.thirdSection .rightSection .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.thirdSection .rightSection .item:hover img {
+    transform: scale(1.1);
+}
+
+
+
+/* =================================================SERVICES SECTION================================================= */
+
+.fourthSection{
+    padding: 100px 0;
+    background: #dce8f4
+}
+
+.fourthSection h2{
+    font-weight: 800;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: rgb(0, 0, 33);
+}
+
+.service-box{
+    background: #0a0a23;
+    padding: 35px;
+    border-radius: 12px;
+    transition: all 0.35s ease;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-box:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-icon{
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: rgb(170,107,228);
+}
+
+.service-box h4{
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #dce8f4;
+}
+
+.service-box p{
+    color: gray;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* =================================================FOOTER================================================= */
+
+footer{
+    background: rgb(0,0,33);
+    padding-top: 60px;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 34px;
+    padding: 0 120px;
+}
+
+.footer h3{
+    color:#dce8f4;
+}
+
+.footer h4{
+    margin-bottom:15px;
+    color:#dce8f4;
+}
+
+.footer p{
+    color:gray;
+}
+
+.footer ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer ul li{
+    margin-bottom:10px;
+    color:gray;
+}
+
+.footer ul li a{
+    color:gray;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer ul li a:hover{
+    color:rgb(170,107,228);
+}
+
+.social-icons a{
+    font-size:22px;
+    margin-right:15px;
+    color:#dce8f4;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:rgb(170,107,228);
+}
+
+.footer-rights{
+    text-align:center;
+    margin-top:40px;
+    padding:20px 0;
+    color:gray;
+    border-top:1px solid rgb(255,255,255,0.1);
+}
